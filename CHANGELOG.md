@@ -16,3 +16,6 @@ All notable changes to DeBloat are documented here.
 - `frontend/components/ui/Button.tsx`: primary/ghost/danger variants, sm/md sizes
 - `frontend/components/ui/Input.tsx`: labelled input with inline error state
 - `frontend/components/ui/Toggle.tsx`: on/off toggle with 150ms transition
+- `frontend/components/layout/Nav.tsx`: logo with blinking cursor, nav links, cart badge
+- `frontend/components/layout/Footer.tsx`: minimal dark footer
+- `frontend/lib/cartStore.ts`: Zustand cart store (load/add/update/remove/clear)
