@@ -22,3 +22,5 @@ All notable changes to DeBloat are documented here.
 - `frontend/app/(public)/page.tsx`: Home page — hero, stats bar, featured meals (server component)
 - `frontend/components/meals/MacroSlider.tsx`: range slider with label and null-for-max semantics
 - `frontend/components/meals/MacroFilters.tsx`: Apply-gated filters, active tags with dismiss, category pills
+- `frontend/components/meals/MealCard.tsx`: macro pills, price, add-to-cart button, unavailable overlay
+- `frontend/components/meals/MealGrid.tsx`: responsive 3-column grid with empty state

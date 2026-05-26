@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { getMeals } from '@/lib/api'
 import type { Meal } from '@/lib/types'
+import MealCard from '@/components/meals/MealCard'
 
 async function getFeaturedMeals(): Promise<Meal[]> {
   try {
@@ -53,13 +54,7 @@ export default async function HomePage() {
           <h2 className="font-mono text-[#666666] text-xs tracking-widest mb-8">{'// featured meals'}</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {featuredMeals.map(meal => (
-              <div key={meal.id} className="bg-[#161616] border border-[#2A2A2A] p-4">
-                <p className="font-mono text-xs text-[#666666] mb-1">{meal.category}</p>
-                <h3 className="font-mono text-[#F0EFE8] mb-2">{meal.name}</h3>
-                <p className="font-mono text-xs text-[#F0EFE8]">
-                  ₹{(meal.price_paise / 100).toFixed(0)}
-                </p>
-              </div>
+              <MealCard key={meal.id} meal={meal} />
             ))}
           </div>
         </section>
