@@ -20,3 +20,5 @@ All notable changes to DeBloat are documented here.
 - `frontend/components/layout/Footer.tsx`: minimal dark footer
 - `frontend/lib/cartStore.ts`: Zustand cart store (load/add/update/remove/clear)
 - `frontend/app/(public)/page.tsx`: Home page — hero, stats bar, featured meals (server component)
+- `frontend/components/meals/MacroSlider.tsx`: range slider with label and null-for-max semantics
+- `frontend/components/meals/MacroFilters.tsx`: Apply-gated filters, active tags with dismiss, category pills
