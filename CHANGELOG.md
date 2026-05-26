@@ -19,3 +19,4 @@ All notable changes to DeBloat are documented here.
 - `frontend/components/layout/Nav.tsx`: logo with blinking cursor, nav links, cart badge
 - `frontend/components/layout/Footer.tsx`: minimal dark footer
 - `frontend/lib/cartStore.ts`: Zustand cart store (load/add/update/remove/clear)
+- `frontend/app/(public)/page.tsx`: Home page — hero, stats bar, featured meals (server component)
