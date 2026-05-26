@@ -11,3 +11,5 @@ All notable changes to DeBloat are documented here.
 - Jest + React Testing Library setup with ts-jest
 - Stub `Nav` and `Footer` layout components
 - `zustand` and `lucide-react` dependencies
+- `frontend/lib/types.ts`: all shared TypeScript types (Meal, MealPlan, DeliverySlot, CartItem, Address, Order, User, MacroFilters)
+- `frontend/lib/api.ts`: typed fetch wrapper with 401→refresh retry, full endpoint coverage
