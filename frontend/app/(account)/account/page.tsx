@@ -20,7 +20,7 @@ export default function AccountPage() {
   }, [router])
 
   const handleAddAddress = async (data: Omit<Address, 'id' | 'is_default'>) => {
-    const res = await addAddress(data)
+    const res = await addAddress({ ...data, is_default: false })
     setAddresses(prev => [...prev, res.data])
   }
 
