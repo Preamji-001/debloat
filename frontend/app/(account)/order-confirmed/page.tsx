@@ -1,12 +1,12 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { getOrder } from '@/lib/api'
 import type { Order } from '@/lib/types'
 
-export default function OrderConfirmedPage() {
+function OrderConfirmedContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const orderId = searchParams.get('id')
@@ -70,5 +70,17 @@ export default function OrderConfirmedPage() {
         </div>
       </div>
     </main>
+  )
+}
+
+export default function OrderConfirmedPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-[#0D0D0D] flex items-center justify-center">
+        <p className="font-mono text-xs text-[#666666]">{'// loading...'}</p>
+      </main>
+    }>
+      <OrderConfirmedContent />
+    </Suspense>
   )
 }
