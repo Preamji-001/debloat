@@ -144,3 +144,10 @@ export const setMealAvailability = (id: string, is_available: boolean) =>
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ is_available }),
   })
+
+export const updateOrderStatus = (id: string, status: string) =>
+  apiFetch<{ data: Order }>(`/admin/orders/${id}/status`, {
+    method: 'PATCH',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ status }),
+  })
